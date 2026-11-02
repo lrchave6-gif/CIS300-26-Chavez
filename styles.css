@@ -1,0 +1,283 @@
+/* Lindsey Chavez Career Portfolio - styles.css
+   Palette: text #170302, background #fef6f6, primary #a5605d,
+   secondary #f0d575, accent #d67570 */
+
+:root {
+  --text: #170302;
+  --background: #fef6f6;
+  --primary: #a5605d;
+  --secondary: #f0d575;
+  --accent: #d67570;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--primary);
+}
+
+/* ---------- Header ---------- */
+header {
+  align-items: center;
+  background-color: var(--primary);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.logo {
+  align-items: center;
+  background-color: var(--background);
+  border: 2px solid var(--secondary);
+  color: var(--primary);
+  display: flex;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 70px;
+  justify-content: center;
+  width: 110px;
+}
+
+.title-block h1 {
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.title-block p {
+  margin: 0.25em 0 0;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.6em 1.25em;
+  text-decoration: none;
+}
+
+.button-light {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.button-light:hover,
+.button-light:focus {
+  background-color: #FFFFFF;
+}
+
+.button-dark {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.button-dark:hover,
+.button-dark:focus {
+  background-color: var(--text);
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  background-color: #FFFFFF;
+  border-bottom: 3px solid var(--primary);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1px solid var(--accent);
+}
+
+nav a {
+  color: var(--text);
+  display: block;
+  padding: 0.9em 1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--secondary);
+}
+
+nav a[aria-current="page"] {
+  border-bottom: 4px solid var(--accent);
+  font-weight: bold;
+}
+
+/* ---------- Main content ---------- */
+main {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 1.5em;
+}
+
+.page-title {
+  border-bottom: 4px solid var(--accent);
+  color: var(--text);
+  display: inline-block;
+  font-size: 2em;
+  margin: 0 0 1em;
+  padding-bottom: 0.15em;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.profile-photo {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 2px dashed var(--primary);
+  color: var(--primary);
+  display: flex;
+  font-weight: bold;
+  height: 340px;
+  justify-content: center;
+  width: 100%;
+}
+
+.intro-text h3,
+.statement h3 {
+  color: var(--primary);
+  margin-bottom: 0.4em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  list-style-type: none;
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+.tags li {
+  background-color: var(--secondary);
+  border: 1px solid var(--text);
+  padding: 0.4em 1em;
+}
+
+.tags .interest {
+  background-color: #FFFFFF;
+}
+
+.statement {
+  border-top: 1px solid var(--accent);
+  margin-top: 2em;
+  padding-top: 1em;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--text);
+  color: #FFFFFF;
+  padding: 1.5em;
+}
+
+footer a {
+  color: var(--secondary);
+}
+
+footer h3 {
+  margin-top: 0;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.back-to-top {
+  font-weight: bold;
+}
+
+.copyright {
+  border-top: 1px solid var(--accent);
+  margin: 1.5em 0 0;
+  padding-top: 1em;
+  text-align: center;
+}
+
+/* ---------- Medium and large screens ---------- */
+@media screen and (min-width: 700px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .title-block {
+    flex: 1;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav li {
+    border-bottom: none;
+    border-left: 1px solid var(--primary);
+    flex: 1;
+  }
+
+  nav li:first-child {
+    border-left: none;
+  }
+
+  .intro {
+    flex-direction: row;
+  }
+
+  .profile-photo {
+    flex: 0 0 300px;
+    width: 300px;
+  }
+
+  .intro-text {
+    flex: 1;
+  }
+
+  .footer-columns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
