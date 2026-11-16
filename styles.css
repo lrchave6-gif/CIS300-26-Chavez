@@ -24,7 +24,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.2;
 }
@@ -237,6 +238,151 @@ footer ul {
   text-align: center;
 }
 
+/* ---------- Education page ---------- */
+.lead {
+  font-size: 1.1em;
+  max-width: 60em;
+}
+
+.degree {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.school-logo {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 2px dashed var(--primary);
+  color: var(--primary);
+  display: flex;
+  flex: 0 0 auto;
+  font-weight: bold;
+  height: 110px;
+  justify-content: center;
+  width: 110px;
+}
+
+.degree-details h3,
+.education-section h3,
+.contact-form h3,
+.contact-info h3 {
+  color: var(--primary);
+  margin: 0 0 0.4em;
+}
+
+.meta {
+  font-weight: bold;
+  margin: 0 0 0.5em;
+}
+
+.education-section {
+  margin-top: 2em;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--text);
+  border-top: 6px solid var(--secondary);
+  padding: 1em;
+}
+
+.card h4 {
+  color: var(--text);
+  margin: 0 0 0.4em;
+}
+
+.card p {
+  margin: 0;
+}
+
+.connections li {
+  margin-bottom: 0.75em;
+}
+
+/* ---------- Contact page ---------- */
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #FFFFFF;
+  border: 2px solid var(--text);
+  color: var(--text);
+  display: block;
+  font: inherit;
+  margin-bottom: 1em;
+  padding: 0.6em;
+  width: 100%;
+}
+
+.contact-form textarea {
+  min-height: 10em;
+  resize: vertical;
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 0.75em;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.social-links a {
+  align-items: center;
+  background-color: var(--secondary);
+  border: 2px solid var(--text);
+  color: var(--text);
+  display: flex;
+  font-weight: bold;
+  height: 100px;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
 /* ---------- Medium and large screens ---------- */
 @media screen and (min-width: 700px) {
   header {
@@ -279,5 +425,21 @@ footer ul {
   .footer-columns {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .degree {
+    flex-direction: row;
+  }
+
+  .contact-layout {
+    flex-direction: row;
+  }
+
+  .contact-form {
+    flex: 1.4;
+  }
+
+  .contact-info {
+    flex: 1;
   }
 }
